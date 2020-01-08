@@ -7,7 +7,7 @@
 <title>
     关于 | Gridea
 </title>
-<link rel="shortcut icon" href="https://mymooncat.github.io/favicon.ico?v=1578455784541">
+<link rel="shortcut icon" href="https://mymooncat.github.io/favicon.ico?v=1578457099161">
 <!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous"> -->
 <link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
@@ -20,6 +20,13 @@
 
 
         
+            
+                <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+                <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+                
+
+                    
+                            
 </head>
 
 <body>
@@ -28,7 +35,7 @@
     <div class="nav">
         <div class="logo">
             <a href="https://mymooncat.github.io">
-                <img class="avatar" src="https://mymooncat.github.io/images/avatar.png?v=1578455784541" alt="">
+                <img class="avatar" src="https://mymooncat.github.io/images/avatar.png?v=1578457099161" alt="">
             </a>
             <div class="site-title">
                 <h1>
@@ -180,7 +187,7 @@
 
 
             <div class="site-footer">
-  Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a> | 
+   | 
   <a class="rss" href="https://mymooncat.github.io/atom.xml" target="_blank">RSS</a>
 </div>
 
@@ -197,6 +204,26 @@
         });
     </script>
     
+        
+            <script>
+    window.onload = function() {
+        var gitalk = new Gitalk({
+            clientID: 'e7850cf8805f1b237e8d',
+            clientSecret: '9484ee6c135eaca15c28a94aadcff926acf019c3',
+            repo: 'MyMoonCat.github.io',
+            owner: 'MyMoonCat',
+            admin: ['MyMoonCat'],
+            id: (location.pathname).substring(0, 49), // Ensure uniqueness and length less than 50
+            distractionFreeMode: false // Facebook-like distraction free mode
+        })
+
+        gitalk.render('gitalk-container')
+    }
+</script>
+                
+
+                    
+                                
 </body>
 
 </html>
